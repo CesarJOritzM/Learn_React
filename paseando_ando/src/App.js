@@ -5,7 +5,7 @@ import Place from './Components/Place/Place';
 import NearbyPlace from './Components/Cercanos/NearbyPlace'
 import Rating from './Components/Rating/Rating'
 import Horario from './Components/Horario/Horario'
-import Reviews from './Components/Comentarios/Reviews';
+// import Reviews from './Components/Comentarios/Reviews';
 
 class App extends Component {
   constructor(props) {
@@ -160,7 +160,7 @@ class App extends Component {
       if (place.rating){
         rating = <Rating placeRating={place.rating} placeReviews={place.reviews}/>
       }
-      const reviews = <Reviews comentarios={place.reviews}/>
+      // const reviews = <Reviews comentarios={place.reviews}/>
       console.log('address_component: ' + place.address_component,
         'adr_address: ' + place.adr_address, 'alt_id', 'formatted_address', 'geometry: ' + place.geometry,
         'icon: ' + place.icon, 'permanently_closed', 'photo', ' + rating: ' + place.rating,
@@ -171,7 +171,7 @@ class App extends Component {
         placeHorarios:placeHorarios,
         nearbyPlaces: [],
         placeLocation: place.geometry.location,
-        placeReviews: reviews
+        // placeReviews: reviews
       })
       this.showMap(place.geometry.location);
     }
@@ -216,7 +216,7 @@ class App extends Component {
           {this.state.places}
           {this.state.placeHorarios}
           {this.state.placeRating}
-          {this.state.placeReviews}
+          {/* {this.state.placeReviews} */}
           {this.state.places &&
            <div className="container">  
               <div className='row'>

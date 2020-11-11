@@ -19,7 +19,7 @@ export default class Place extends Component {
     return (
       <div>
         <div className='row py-2'>
-          <div className='col-12 text-center' >{this.props.placeData.name}</div>
+          <div className='col-12 text-center' ><strong>{this.props.placeData.name}</strong></div>
         </div>
         <div className='row py-2'>
           {htmlPhotos.slice(0,3)} 
@@ -28,7 +28,7 @@ export default class Place extends Component {
           {htmlPhotos.slice(3,6)} 
         </div>
         <div className='row' >
-          <div className='col-12 text-center mb-4'> {this.props.placeData.address}</div>
+          <div className='col-12 text-center mb-4'>{this.props.placeData.address}</div>
         </div>
       </div>
     )

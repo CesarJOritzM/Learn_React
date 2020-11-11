@@ -16,31 +16,22 @@ export default class Reviews extends Component {
   }
 
   render() { 
-   /*const review = this.props.comentarios.map((eachChildren)=>{
-     return{
-       author_name: eachChildren.author_name,
-       text: eachChildren.text
-     }
-   })*/
-    var cometarios = "";
-    if (this.props.comentarios) {
-      const nombre = this.props.comentarios.map((comentario,index) => {
-          return <div key={index} className='row'>
-                   {comentario}
-                 </div>;
-      })
-    cometarios = 
-               <div className='row'>
-                <div className='col-3'><strong><a id='reviews' href='#' onClick={this.manejoOnClick} >comentarios</a></strong></div>
-                <div className={'col-6 '+(this.state.mostrarReviews ? 'd-block' : 'd-none')}>{nombre}</div>
-               </div>
-    }else
-      cometarios =
-                <div className="container">
-                  <div className='row'>
-                    <strong>No hay comentarios</strong>
-                  </div>
-                </div>
+
+   var arr = this.props.comentarios
+   const nombres = arr.map((props, index )=>{
+     return <div key={index}>
+              {props}
+            </div>
+
+   })
+ 
+  //  if (arr.length >= 5){
+  //    for (var i = 0; i < arr.length; i++){
+  //      var obj = arr[i]
+
+  //    }
+  //  }
+   console.log(nombres)
     return (
       <div id="reviews" className="container">
         <a href='#' onClick={this.manejoOnClick}>Comentarios</a>
