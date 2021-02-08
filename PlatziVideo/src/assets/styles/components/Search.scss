@@ -1,3 +1,5 @@
+@import "../Vars.scss";
+
 .main {
   display: flex;
   align-items: center;
@@ -6,15 +8,15 @@
   height: 300px;
   border-radius: 0px 0px 40px 40px;
   &__title {
-    color: white;
+    color: $light-color;
     font-size: 25px;
   }
   .input {
     background-color: rgba(255,255,255,0.1);
-    border: 2px solid white;
+    border: 2px solid $light-color;
     border-radius: 25px;
-    color: white;
-    font-family: 'Muli', sans-serif;
+    color: $light-color;
+    font-family: $theme-font;
     font-size: 16px;
     height: 50px;
     margin-bottom: 20px;
@@ -22,7 +24,7 @@
     padding: 0px 20px;
     width: 70%;
     &::placeholder {
-      color: white;
+      color: $light-color;
     }
   }
 }
