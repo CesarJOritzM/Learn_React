@@ -3,7 +3,7 @@ const reducer = (state, action) => {
     case "SET_FAVORITE" :
       return {
         ...state,
-        mylist: [...state.mylist,action.playload ]
+        myList: [...state.myList, action.payLoad ]
       }
     default:
       return state;

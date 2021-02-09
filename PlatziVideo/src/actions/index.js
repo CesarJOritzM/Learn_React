@@ -1,4 +1,4 @@
-export const setFavorite = (playLoad) => ({
+export const setFavorite = (payLoad) => ({
   type: "SET_FAVORITE",
-  playLoad,
+  payLoad,
 });
