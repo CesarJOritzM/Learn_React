@@ -1,3 +1,5 @@
+@import "../Vars.scss";
+
 .carousel-item {
   border-radius: 20px;
   overflow: hidden;
@@ -41,12 +43,12 @@
       width: 20px;
     }
     &--title {
-      color: white;
+      color: $light-color;
       margin: 5px 0px 0px 0px;
     }
 
     &--subtitle {
-      color: white;
+      color: $light-color;
       font-size: 8px;
       margin: 3px 0px;
     }
