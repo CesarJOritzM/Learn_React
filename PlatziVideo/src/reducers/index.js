@@ -25,13 +25,23 @@ const reducer = (state, action) => {
         ...state,
         user: action.payLoad,
       };
-    case 'GET_VIDEO_SOURCE':
+    case "GET_VIDEO_SOURCE":
       return {
         ...state,
-        playing: state.trends.find(item => item.id === Number(action.payload)) 
-        || state.originals.find(item => item.id === Number(action.payload))
-        || []
-      }
+        playing:
+          [...state.trends, ...state.originals].find(
+            (item) => item.id === Number(action.payload)
+          ) || [],
+      };
+    case "SEARCH_REQUEST":
+      return {
+        ...state,
+        search: action.payload,
+        searchResults:
+          [...state.trends, ...state.originals].filter((item) =>
+            item.title.toLowerCase().includes(action.payload.toLowerCase())
+          ) || [],
+      };
     default:
       return state;
   }

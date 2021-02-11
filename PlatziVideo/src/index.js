@@ -7,6 +7,8 @@ import reducer from "./reducers";
 import App from "./routes/app";
 
 const initialState = {
+  search: "",
+  searchResults: [],
   user: {},
   playing: {},
   myList: [],
